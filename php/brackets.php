@@ -22,4 +22,3 @@ function parse($item) {
 function braces($values) {
     return array_map('parse', $values);
 };
-?>

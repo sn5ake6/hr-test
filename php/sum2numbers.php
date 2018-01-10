@@ -20,4 +20,3 @@ while (count($number_1) + count($number_2) > 0){
 if ($add_one == 1) $result[] = $add_one;
 $result = implode(array_reverse($result));
 echo $result;
-?>
