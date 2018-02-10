@@ -1,5 +1,6 @@
 <?php
-function process_bracket($stack, $bracket) {
+function processBracket($stack, $bracket)
+{
     $bracket_map = ['{' => '}', '[' => ']', '(' => ')'];
     if (array_key_exists($bracket, $bracket_map)) {
       $stack[] = $bracket;
@@ -12,13 +13,13 @@ function process_bracket($stack, $bracket) {
       };
     };
     return $stack;
-};
+}
 
 function parse($item) {
-    $stack = array_reduce(str_split($item), 'process_bracket', []);
+    $stack = array_reduce(str_split($item), 'processBracket', []);
     return count($stack) == 0 ? 'YES' : 'NO';
-};
+}
 
-function braces($values) {
+function process($values) {
     return array_map('parse', $values);
-};
+}
