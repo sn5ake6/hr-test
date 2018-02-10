@@ -1,6 +1,5 @@
 <?php
 use PHPUnit\Framework\TestCase;
-require_once dirname(__FILE__) . '/../brackets.php';
 
 final class BracketsTest extends TestCase
 {
@@ -15,6 +14,6 @@ final class BracketsTest extends TestCase
             '{()}',
             '()(){}'
         ];
-        $this->assertEquals($expected, braces($values));
+        $this->assertEquals($expected, Brackets::process($values));
     }
 }
